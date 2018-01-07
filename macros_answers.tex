@@ -1,0 +1,72 @@
+
+
+% - - - - - - - - - - - - - -
+% PARAMETRAGE DU PACKAGE ANSWERS 
+% POUR LES INDICATIONS ET CORRECTIONS
+% - - - - - - - - - - - - - - 
+
+\usepackage{answers}
+
+
+
+\Newassociation{sol}{Soln}{solutions}
+% ira dans le fichier d'identifiant 'solutions'
+% et écrira les solutions dans un environnement 'Soln'
+\Newassociation{hint}{Hint}{indications}
+
+%\newenvironment{exo}{
+%\begin{ex} \label{enonce.\theex}
+%
+%}
+%{~\hyperref[indication.\theex]{[Indications]}
+%~\hyperref[solution.\theex]{[Correction]}~\end{ex} }
+
+
+\usepackage{xparse}
+\NewDocumentEnvironment{exo}{o}
+ {\label{enonce.\theex} \IfNoValueTF{#1}
+   {\ex\addcontentsline{toc}{subsubsection}{\protect\numberline{\theex}  }}
+   {\ex[#1]\addcontentsline{toc}{subsubsection}{\protect\numberline{\theex}#1}}%
+   \ignorespaces}
+ {~\hyperref[indication.\theex]{[Indications]}
+~\hyperref[solution.\theex]{[Correction]}~\endex\medskip\hrule}
+ 
+ 
+
+
+\renewenvironment{Hint}[1]{
+\noindent \textbf{Indications pour l'exercice #1} (retour à l'\hyperref[enonce.#1]{énoncé}, voir la \hyperref[solution.#1]{correction}) 
+\phantomsection\label{indication.#1}
+}
+
+\renewenvironment{Soln}[1]{
+\noindent \textbf{Correction de l'exercice #1} (retour à l'\hyperref[enonce.#1]{énoncé}, retour à l'\hyperref[indication.#1]{indication}) 
+\phantomsection\label{solution.#1}
+}
+
+
+
+
+% - - - - - - - - - - - - - - 
+% FIN PARAMETRAGE ANSWERS
+% - - - - - - - - - - - - - - 
+
+%-----------------------------
+% MACROS POUR LES FEUILLES DE TD
+
+
+
+\newcommand{\debut}{
+	\Opensolutionfile{indications}[\jobname_hints]
+	\Opensolutionfile{solutions}[\jobname_sol]
+	
+}
+\newcommand{\fin}{
+	\Closesolutionfile{indications}
+	\Closesolutionfile{solutions}
+	\section{Indications pour la résolution des exercices}
+	\Readsolutionfile{indications}
+	\newpage
+	\section{Correction des exercices}
+	\Readsolutionfile{solutions}
+}

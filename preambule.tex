@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs,stmaryrd}
+\usepackage{fancybox,multicol,comment,datetime}
+\usepackage{framed} % pour encadrer
+\usepackage{fontawesome}
+\usepackage{fourier}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=[rgb]{0,0.2,0.6},          % color of internal links
+    citecolor=[rgb]{0,0.2,0.6},        % color of links to bibliography
+    filecolor=[rgb]{0,0.2,0.6},      % color of file links
+    urlcolor=[rgb]{0.7,0.2,0.2}           % color of external links
+}
+
+\usepackage[all]{hypcap} % règle pb cible des liens hyperref
+\usepackage{pgf,pgfmath,tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary[patterns]
+\tikzset{every picture/.style={execute at begin picture={
+   \shorthandoff{:;!?};}
+}}
+
+\usepackage[margin=2.5cm]{geometry}
+
+
+
+\usepackage[normalem]{ulem} % pour souligner avec changements de ligne
+\usepackage{esvect} % pour jolis vecteurs avec \vv
+
+\everymath{\displaystyle} 
+
+
+
+\theoremstyle{definition}
+\newtheorem{theoreme}{Théorème}[section]
+\newtheorem{definition}[theoreme]{Définition}
+\newtheorem{lemme}[theoreme]{Lemme}
+\newtheorem{proposition}[theoreme]{Proposition}
+\newtheorem{corollaire}[theoreme]{Corollaire}
+\newtheorem{remarque}[theoreme]{Remarque}
+\newtheorem{ex}{Exercice}
+
+
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\U}{\mathbb U}
+\newcommand{\F}{\mathbb F}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% MISE EN FORME CLUB %%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\pagestyle{empty}
+
+
+
+% En-tête des feuilles :
+
+\newcommand{\enTete}[1]{
+\noindent \textbf{\textsf{\href{http://depmath-nancy.univ-lorraine.fr/club/}{Club Mathématique de Nancy} \hfill Institut Élie Cartan}}
+\hrule
+\begin{center}
+{\Huge \textbf{#1}}
+\end{center}
+\hrule
+\vspace{1em}
+}
+
+
+%----- Structure des exercices ------
+
+\newenvironment{prerequis}{(\bfseries Prérequis:}{)\newline}
+

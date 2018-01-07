@@ -1,0 +1,22 @@
+
+
+
+\newenvironment{hint}{$ $\\ \textbf{Indication:}}{}
+\newenvironment{sol}{$ $\\ \textbf{Correction:}}{}
+
+\newcommand{\debut}{}
+\newcommand{\fin}{}
+
+% Environnement normal (sans answers) pour les exercices :
+%\newenvironment{exo}{\begin{ex}}{\end{ex}\medskip\hrule}
+
+
+% Alternativement, pour mettre les exos dans la table des matières :(nécessite xparse)
+\usepackage{xparse}
+\NewDocumentEnvironment{exo}{o}
+ {\IfNoValueTF{#1}
+   {\ex\addcontentsline{toc}{subsubsection}{\protect\numberline{\theex}  }}
+   {\ex[#1]\addcontentsline{toc}{subsubsection}{\protect\numberline{\theex}#1}}%
+   \ignorespaces}
+ {\endex\medskip\hrule}
+
