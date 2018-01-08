@@ -18,26 +18,12 @@
 \small{(classés par niveau, programmes 2016)\\
 Version préliminaire, compilée le \today{}}}
 
-\begin{comment}
-TODO 
-\begin{enumerate}
-%\item calcul littéral voir Lebossé-Hémery p. 107 du pdf
-\item pour les exos avec triangles semblables et exos de sixième, voir les lebossé-Hemery
-\item mettre exos Alarcon
-\item preuves de pythagore avec rotations 
-\item preuve du thm de l'angle inscrit en 4ème ou cinquième avec triangles isocèles.
-\item somme des angles dans un $n$-gone -> cinquième
-\item Rajouter les exos-théorèmes sur chaque polygone classique : tous triangles, rectangles, carrés, losanges, parallélogrammes, cerf-volants, avec formulation par nombre d'axes de symétrie et centres de symétrie. Voire le Lebossé-Hémery pour ça.
-\end{enumerate}
-\end{comment}
 
 \begin{multicols}{2}
 \tableofcontents
 \end{multicols}
 
-% premiers exercices du Deslandes (mise en équation ?)
 
-% exos kangourou
 
 \section{Introduction}
 
@@ -62,9 +48,9 @@ Certains exercices demandent plus d'initiative que d'autres : compléter une fig
 
 %\paragraph{Commentaires techniques sur le document lui-même :}
 
-%Ce document ainsi que son fichier source modifiable (en \LaTeX) sont disponibles à l'adresse :
+Ce document ainsi que son fichier source modifiable (en \LaTeX) sont disponibles à l'adresse :
 
-% \url{http://depmath-nancy.univ-lorraine.fr/club}.
+\url{http://depmath-nancy.univ-lorraine.fr/club}.
  
 %Pour masquer les prérequis, décommenter simplement la ligne
 %\verb+\excludecomment{prerequis}+
@@ -129,7 +115,7 @@ Chaque terme semble être la somme des deux précédents. Dans ce cas, le procha
 \end{exo}
 
 \begin{exo}[Les enfants du voisin]
-
+% un classique
 Mon voisin vient d'emménager. Il me dit avoir trois enfants dont les âges sont des nombres entiers.
 
 Si on fait le produit de leurs âges, on trouvera $36$ et leur somme sera justement le numéro de la maison d'en face.
@@ -186,9 +172,8 @@ Entre chacun des dix chiffres, c'est-à-dire à neuf emplacements possibles, on 
 \end{exo}
 
 \begin{exo}[Nénuphar]
-
-[Traduit de : Arnold : \emph{77 problems for children 5 to 15}]
-% prendre le problème  l'envers, commencer par la fin
+(Traduit de : Arnold : \emph{77 problems for children 5 to 15})
+% compétence : prendre le problème à l'envers, commencer par la fin
 
 En Amérique du Sud, il y a un étang circulaire. Tous les ans, le premier juin, un nénuphar apparaît au centre du lac et commence à grandir. Toutes les $24$ heures, la superficie du lac couverte par le nénuphar double, et le premier juillet à midi, le lac est tout juste entièrement couvert par le nénuphar.
 
@@ -202,11 +187,14 @@ Vingt-quatre heures avant qu'il ne soit totalement recouvert, c'est-à-dire le 3
 \end{exo}
 
 \begin{exo}[Même nombre d'amis]
+% (cas particulier du principe des tiroirs)
 Le jour de la rentrée, certains élèves d'une même classe se connaissent et d'autres non. (On suppose que le fait, pour deux élèves, de se connaître est symétrique : si Pierre connaît Paul alors Paul connaît Pierre.)
 
 Montrer qu'il y a deux élèves de la classe qui connaissent chacun autant de monde.
 \begin{sol}
-Notons $n$ le nombre de participants\footnote{Méthode : nommer les objets permet de raisonner ou de faire des calculs dessus plus clairement.}. Pour chaque entier $k$ compris entre $1$ et $n$, notons $a_n$ le nombre personnes que connaît le $n$-ème participant. Alors les $a_i$ sont $n$ entiers entre $0$ et $n-1$ et il s'agit de montrer que deux d'entre eux sont identiques. (Notons que le principe des tiroirs ne permet pas de conclure immédiatement, puisqu'il y a $n$ entiers à distribuer dans $n$ tiroirs.)
+(Note : la solution qui suit n'est pas adaptée à la 6ème car il y a du calcul littéral, mais on peut faire sans.) 
+
+Notons $n$ le nombre de participants. Pour chaque entier $k$ compris entre $1$ et $n$, notons $a_n$ le nombre personnes que connaît le $n$-ème participant. Alors les $a_i$ sont $n$ entiers entre $0$ et $n-1$ et il s'agit de montrer que deux d'entre eux sont identiques. (Notons que le principe des tiroirs ne permet pas de conclure immédiatement, puisqu'il y a $n$ entiers à distribuer dans $n$ tiroirs.)
 
 Supposons que tous les $a_i$ soient distincts. Alors ils valent forcément (dans le désordre) $0$, $1$, $2$, .. $n-1$. Ceci signifie qu'un participant connaît tout le monde, et qu'un autre ne connaît personne, ce qui est absurde. On en déduit que deux des entiers $a_i$ sont égaux.
 \end{sol}
@@ -226,6 +214,7 @@ Or on a choisi onze nombres entiers, donc comme il n'y a que dix lots, on a forc
 
 
 \begin{exo}[Carré un peu magique]
+% cas particulier du principe des tiroirs
 On remplit un tableau $3\times 3$  avec les nombres $-1$, $0$ et $1$, puis on calcule la somme des nombres dans chaque ligne, chaque colonne, et chacune des deux diagonales. Montrer que parmi les sommes obtenues, il y en a deux qui sont égales.
 \begin{sol}
 Comme chaque coefficient est compris entre $-1$ et $1$, la somme de trois coefficients est comprise entre $-3$ et $3$, ce qui fait sept valeurs entières possibles.
@@ -239,6 +228,7 @@ Il y a donc au moins deux des huit sommes qui sont identiques. (C'est le princip
 
 
 \begin{exo}[Même anniversaire]
+% principe des tiroirs
 \begin{enumerate}
 \item
 Le lycée Dirichlet compte $400$ élèves. Montrer qu'il existe (au moins) deux élèves qui fêtent leur anniversaire le même jour.
@@ -309,8 +299,6 @@ On montre de la même manière que la droite $(AC)$ est la médiatrice du segmen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-%Nouveauté : somme des angles d'un triangle 
 
 \subsection{Cercle circonscrit, triangles isocèles}
 
@@ -495,9 +483,9 @@ Note : on peut aussi poser cet exercice de la façon suivante \og Montrer qu'un 
 \end{exo}
 
 \begin{exo}[Deux réflexions $\heartsuit$]
- 
 % Lebossé-Hemery 5ème, p. 204 
 % triangles isocèles, bissectrices
+
 Soit $A$ un point intérieur à un angle $xOy$. On note $B$ et $C$ les symétriques de $A$ par rapport aux bords de l'angle. Le segment $[BC]$ coupe les bords de l'angle en $D$ et $E$. Montrer que $[AO)$ est la bissectrice de l'angle $\widehat{DAE}$.
 
 \begin{center}
@@ -602,8 +590,6 @@ Finalement, \fbox{$\widehat{OAE}=\widehat{OAD}$, et donc $[AO)$ est la bissectri
 
 \subsection{Aires et périmètres}
 
-%Voir les exercices de \url{http://debart.pagesperso-orange.fr/college/geometrie_cinquieme.html}, à la fin : aires de triangles etc. 5ème.
-
 
 
 \begin{exo}[Aire d'un quadrilatère orthodiagonal]
@@ -689,7 +675,7 @@ Soit $ABCD$ un trapèze, et $O$ l'intersection de ses diagonales. Montrer que le
 \end{exo}
  
 \begin{exo}[Triangle dans un pentagone]
-
+% Debart
 Soit $ABCD$ un rectangle, $E$, $F$, $G$ et $H$ les milieux de ses côtés, et $I$ le milieu de $[GF]$. Que vaut l'aire du triangle $HEI$, en fonction de celle du rectangle ?
 \begin{center}
 \definecolor{zzttqq}{rgb}{0.6,0.2,0.}
@@ -779,6 +765,7 @@ On en déduit que l'aire du triangle vaut un quart de celle du rectangle.
 \end{exo}
 
 \begin{exo}[Théorème du chevron]
+% Debart
 Soit $ABC$ un triangle, $P$ un point sur $[BC]$, et $D$ un point sur $(AP)$. Montrer que la proportion entre les aires de $ACD$ et $ABD$ est la même que celle entre les longueurs $PC$ et $PB$.
 
 (Par exemple, si $P$ est au tiers de $[BC]$ à partir de $B$, alors $PC = 2PB$ et le résultat dit que l'aire de $ACD$ vaut le double de celle de $ABD$.)
@@ -825,8 +812,7 @@ Soit $ABC$ un triangle, $P$ un point sur $[BC]$, et $D$ un point sur $(AP)$. Mon
 % symétrie centrale
 Soit $ABCD$ un quadrilatère. On place des points $I$, $J$, $K$ et $L$ au tiers de chacun de ses côtés lorsqu'on les parcourt dans le même sens. 
 Montrer que si $ABCD$ est un parallélogramme, alors $IJKL$ aussi.
-% et réciproquement.
-% vérifier la réciproque ?
+% et réciproquement?
 \begin{sol}
 On considère la symétrie centrale  de centre $O$ (le centre de $ABCD$). Comme une symétrie centrale préserve les distances, et de plus envoie une droite sur une droite parallèle, on voit que l'image de $I$ est $K$, et l'image de $J$ est $L$. Ceci montre que $IJKL$ est un parallélogramme.
 
@@ -907,6 +893,7 @@ On en déduit que $M'BCM''$ est un parallélogramme, et donc ses côtés opposé
 
 
 \begin{exo}[Constructions d'un losange inscrit]
+% source : Euclidea
 \begin{prerequis}
 Médiatrice, losanges
 \end{prerequis}
@@ -1036,6 +1023,7 @@ On peut faire un peu plus rapide avec la théorème des milieux, mais cette preu
 \subsection{Inégalité triangulaire}
 
 \begin{exo}[Chemin moins long]
+% un grand classique
 Soit $ABC$ un triangle, et soit $O$ un point à l'intérieur du triangle. Montrer que 
 \[OA+OB \leq CA+CB.\]
 \begin{center}
